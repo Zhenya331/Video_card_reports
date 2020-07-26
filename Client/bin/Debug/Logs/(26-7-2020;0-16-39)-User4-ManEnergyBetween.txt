@@ -1,0 +1,11 @@
+Manufactory name = Nvidia
+Min energy use = 0
+Max energy use = 100
+Name	Energy Use
+GT 1030	20
+GT 720	23
+GTX 750	55
+GTX 750 TI	60
+GT 740	64
+GTX 1050	75
+GTX 1050 TI	75

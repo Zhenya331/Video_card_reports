@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Graphic_cardsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="sql_Arch_cost_avg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Arch_Name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sql_Manufact_energy_between" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Manufact_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Min_Energy" Type="int" Mode="In" />
+    <Parameter Name="Max_Energy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sql_Manufact_memory_each_year" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Manufact_Name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sql_Memory_between_and_year" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="Min_memory" Type="int" Mode="In" />
+    <Parameter Name="Max_memory" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Хранилище Graphic_cardsModelContainer" />
+</Schema>

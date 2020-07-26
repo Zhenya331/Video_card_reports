@@ -1,0 +1,6 @@
+Architecture name = Turing
+Name	Cost
+RTX 2060	25072
+RTX 2070	36245
+RTX 2080	53597
+RTX 2080 TI	87302

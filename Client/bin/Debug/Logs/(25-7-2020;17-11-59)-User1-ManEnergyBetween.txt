@@ -1,0 +1,7 @@
+Manufactory name = AMD
+Min energy use = 0
+Max energy use = 100
+Name	Energy Use
+RX 550	50
+RX 560	70
+RX 460	74

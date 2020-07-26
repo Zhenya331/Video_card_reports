@@ -1,0 +1,12 @@
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\bin\Debug\Server.exe.config
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\bin\Debug\Server.exe
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\bin\Debug\Server.pdb
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\obj\Debug\Server.exe
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\obj\Debug\Server.pdb
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\bin\Debug\EntityFramework.dll
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\bin\Debug\EntityFramework.xml
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zhenya\Desktop\Study\Бакалавриат\Работа\Server\obj\Debug\Server.csproj.CopyComplete

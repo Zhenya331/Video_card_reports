@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Graphic_cardsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="sql_Arch_cost_avg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Arch_Name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sql_Manufact_energy_between" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Manufact_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Min_Energy" Type="int" Mode="In" />
+          <Parameter Name="Max_Energy" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sql_Manufact_memory_each_year" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Manufact_Name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sql_Memory_between_and_year" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Year" Type="int" Mode="In" />
+          <Parameter Name="Min_memory" Type="int" Mode="In" />
+          <Parameter Name="Max_memory" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="Хранилище Graphic_cardsModelContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Graphic_cardsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Graphic_cardsEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="sql_Arch_cost_avg" ReturnType="Collection(Graphic_cardsModel.sql_Arch_cost_avg_Result)">
+            <Parameter Name="Arch_Name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sql_Manufact_energy_between" ReturnType="Collection(Graphic_cardsModel.sql_Manufact_energy_between_Result)">
+            <Parameter Name="Manufact_name" Mode="In" Type="String" />
+            <Parameter Name="Min_Energy" Mode="In" Type="Int32" />
+            <Parameter Name="Max_Energy" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sql_Manufact_memory_each_year" ReturnType="Collection(Graphic_cardsModel.sql_Manufact_memory_each_year_Result)">
+            <Parameter Name="Manufact_Name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sql_Memory_between_and_year" ReturnType="Collection(Graphic_cardsModel.sql_Memory_between_and_year_Result)">
+            <Parameter Name="Year" Mode="In" Type="Int32" />
+            <Parameter Name="Min_memory" Mode="In" Type="Int32" />
+            <Parameter Name="Max_memory" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sql_Arch_cost_avg_Result">
+          <Property Type="String" Name="Название" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Цена" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sql_Manufact_energy_between_Result">
+          <Property Type="String" Name="Название" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Energy_use" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sql_Manufact_memory_each_year_Result">
+          <Property Type="Int32" Name="Год" Nullable="false" />
+          <Property Type="Int32" Name="Минимальный" Nullable="true" />
+          <Property Type="Int32" Name="Максимальный" Nullable="true" />
+          <Property Type="Int32" Name="Средний" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sql_Memory_between_and_year_Result">
+          <Property Type="String" Name="Название" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Объем_Памяти" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Graphic_cardsModelContainer" CdmEntityContainer="Graphic_cardsEntities" >
+          <FunctionImportMapping FunctionImportName="sql_Arch_cost_avg" FunctionName="Хранилище Graphic_cardsModel.sql_Arch_cost_avg">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Arch_cost_avg_Result">
+                <ScalarProperty Name="Название" ColumnName="Название" />
+                <ScalarProperty Name="Цена" ColumnName="Цена" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sql_Manufact_energy_between" FunctionName="Хранилище Graphic_cardsModel.sql_Manufact_energy_between">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Manufact_energy_between_Result">
+                <ScalarProperty Name="Название" ColumnName="Название" />
+                <ScalarProperty Name="Energy_use" ColumnName="Energy_use" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sql_Manufact_memory_each_year" FunctionName="Хранилище Graphic_cardsModel.sql_Manufact_memory_each_year">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Manufact_memory_each_year_Result">
+                <ScalarProperty Name="Год" ColumnName="Год" />
+                <ScalarProperty Name="Минимальный" ColumnName="Минимальный" />
+                <ScalarProperty Name="Максимальный" ColumnName="Максимальный" />
+                <ScalarProperty Name="Средний" ColumnName="Средний" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sql_Memory_between_and_year" FunctionName="Хранилище Graphic_cardsModel.sql_Memory_between_and_year">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Memory_between_and_year_Result">
+                <ScalarProperty Name="Название" ColumnName="Название" />
+                <ScalarProperty Name="Объем_Памяти" ColumnName="Объем Памяти" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

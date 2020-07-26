@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Graphic_cardsModelContainer" CdmEntityContainer="Graphic_cardsEntities">
+    <FunctionImportMapping FunctionImportName="sql_Arch_cost_avg" FunctionName="Хранилище Graphic_cardsModel.sql_Arch_cost_avg">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Arch_cost_avg_Result">
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Цена" ColumnName="Цена" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_Manufact_energy_between" FunctionName="Хранилище Graphic_cardsModel.sql_Manufact_energy_between">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Manufact_energy_between_Result">
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Energy_use" ColumnName="Energy_use" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_Manufact_memory_each_year" FunctionName="Хранилище Graphic_cardsModel.sql_Manufact_memory_each_year">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Manufact_memory_each_year_Result">
+          <ScalarProperty Name="Год" ColumnName="Год" />
+          <ScalarProperty Name="Минимальный" ColumnName="Минимальный" />
+          <ScalarProperty Name="Максимальный" ColumnName="Максимальный" />
+          <ScalarProperty Name="Средний" ColumnName="Средний" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sql_Memory_between_and_year" FunctionName="Хранилище Graphic_cardsModel.sql_Memory_between_and_year">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Graphic_cardsModel.sql_Memory_between_and_year_Result">
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Объем_Памяти" ColumnName="Объем Памяти" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,6 @@
+Architecture name = Pascal
+Name	Cost
+GTX 1050	8875
+GTX 1050 TI	11407
+GTX 1060	14945
+GTX 1070	30157
