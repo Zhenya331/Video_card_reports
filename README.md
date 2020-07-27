@@ -18,8 +18,14 @@ Client-Server-Database architecture
 
     ![Image alt](https://github.com/Zhenya331/Video_card_reports/raw/master/Images/Get_Result.png)
 
+- Клиент создан при помощи WPF, Сервер - консольное приложение.
 - Отправка данных между клиентом и сервером происходит по TCP протоколу.
-- Сервер берет данные из бд при помощи Entity framework
+- Сервер берет данные из бд при помощи Entity framework.
 - Стоит отметить, что сервер берет данные не сразу из бд, а через хранимые процедуры, находящиеся в ней.
 
   ![Image alt](https://github.com/Zhenya331/Video_card_reports/raw/master/Images/Proc.png)
+
+В БД Users находятя следующие пользователи (UserName; Password):
+1.  User1; User1
+2.  User2; User2
+3.  User4; User4
