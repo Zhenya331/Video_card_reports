@@ -25,11 +25,11 @@ Client-Server-Database architecture
 
   ![Image alt](https://github.com/Zhenya331/Video_card_reports/raw/master/Images/Proc.png)
 
-В БД Users находятя следующие пользователи (UserName; Password):
+В БД Users находятся следующие пользователи (UserName; Password):
 1.  User1; User1
 2.  User2; User2
 3.  User4; User4
 
-- Также в сервере имеется система логгирования.
+- Также в сервере имеется система логирования.
 - История действий клиентов отображается в консоли, а также записывается в txt файл по пути Server/bin/Debug/Logs.
 - В коде сервера можно добавить свои способы хранения истории действий клиентов.
